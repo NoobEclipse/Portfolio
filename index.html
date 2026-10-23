@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Portfolio</title>
+<style>
+    /* Base styling */
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Courier New', monospace;
+        background-color: black;
+        color: #00cc00; /* dimmer green */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+        border: 5px solid #00cc00;
+        position: relative;
+        animation: flicker 2s infinite;
+        overflow: hidden;
+    }
+
+    /* Matrix background canvas overlay */
+    #matrix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+    /* Flicker animation for body border */
+    @keyframes flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            border-color: #00cc00;
+            box-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00;
+        }
+        20%, 22%, 24%, 55% {
+            border-color: #00ff88;
+            box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+        }
+    }
+
+    /* Boxes with flicker/glitch effect */
+    .box {
+        border: 2px solid #00cc00;
+        padding: 20px;
+        margin: 20px 0;
+        width: 90%;
+        max-width: 800px;
+        box-shadow: 0 0 10px #00cc00;
+        animation: boxFlicker 1.5s infinite;
+    }
+
+    @keyframes boxFlicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            border-color: #00cc00;
+            box-shadow: 0 0 10px #00cc00;
+        }
+        20%, 22%, 24%, 55% {
+            border-color: #00ff88;
+            box-shadow: 0 0 5px #00ff88;
+        }
+    }
+
+    /* Headings and links */
+    h1, h2, p, li, a {
+        color: #00cc00;
+    }
+
+    h1, h2 {
+        text-shadow: 0 0 5px #00cc00;
+    }
+
+    a {
+        color: #00cc00;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Subtle glitch text animation */
+    @keyframes glitchText {
+        0% { transform: translate(0); }
+        20% { transform: translate(-1px, 1px); }
+        40% { transform: translate(1px, -1px); }
+        60% { transform: translate(-1px, -1px); }
+        80% { transform: translate(1px, 1px); }
+        100% { transform: translate(0); }
+    }
+
+    .glitch {
+        display: inline-block;
+        animation: glitchText 1s infinite;
+    }
+
+    /* Projects container */
+    .projects {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .projects a {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #00cc00;
+        box-shadow: 0 0 5px #00cc00;
+        margin: 5px;
+        transition: all 0.2s;
+    }
+
+    .projects a:hover {
+        text-decoration: underline;
+        box-shadow: 0 0 10px #00ff88;
+    }
+
+    /* Sidebar about me box */
+    .sidebar {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        width: 220px;
+        z-index: 10;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<!-- Sidebar About Me -->
+<div class="box sidebar">
+    <h2 class="glitch">About Me</h2>
+    <p class="glitch">
+        Hi, I'm Charlie Eastwood. This is my portfolio, here you will see some of my prouder pieces of work. 
+    </p>
+    <p class="glitch">
+	I am currently studying Games Production and Design at the University Of Salford in my second year.
+    </p>
+</div>
+
+<!-- Original Boxes -->
+<div class="box">
+    <h1 class="glitch">Charlie Eastwood</h1>
+    <p class="glitch">Welcome to my portfolio. Here you will see a showcase of some of my work!</p>
+</div>
+
+<div class="box">
+    <h2 class="glitch">Projects</h2>
+    <div class="projects">
+        <a class="glitch" href="projectpage1.html">Project 1</a>
+        <a class="glitch" href="projectpage2.html">Project 2</a>
+        <a class="glitch" href="projectpage3.html">Project 3</a>
+    </div>
+</div>
+
+<div class="box">
+    <h2 class="glitch">Contact Me At:</h2>
+    <div style="display: flex; gap: 30px; align-items: center;">
+        <a href="mailto:ceastwood2005@gmail.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" 
+                 alt="Email" width="40" height="40" 
+                 style="filter: invert(61%) sepia(92%) saturate(750%) hue-rotate(80deg) brightness(110%) contrast(101%);">
+        </a>
+        <a href="https://github.com/NoobEclipse" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+                 alt="Github" width="40" height="40" 
+                 style="filter: invert(61%) sepia(92%) saturate(750%) hue-rotate(80deg) brightness(110%) contrast(101%);">
+        </a>
+        <a href="https://discordapp.com/users/noobeclipse__" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" 
+                 alt="Discord" width="40" height="40" 
+                 style="filter: invert(61%) sepia(92%) saturate(750%) hue-rotate(80deg) brightness(110%) contrast(101%);">
+        </a>
+    </div>
+</div>
+
+<script>
+    // MATRIX BACKGROUND
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#0F0';
+        ctx.font = fontSize + 'px monospace';
+
+        drops.forEach((y, i) => {
+            const text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillText(text, i * fontSize, y * fontSize);
+            drops[i] = y * fontSize > canvas.height && Math.random() > 0.975 ? 0 : y + 1;
+        });
+    }
+
+    setInterval(drawMatrix, 50);
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+
+</body>
+</html>
