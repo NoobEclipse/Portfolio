@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3: Game Design Document | Charlie Eastwood</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: { 850: '#111827', 900: '#0F172A', 950: '#0B0F19' },
+                        emerald: { 400: '#34D399', 500: '#10B981', 600: '#059669' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-900 min-h-screen flex flex-col justify-between">
+
+    <div class="fixed inset-0 z-0 opacity-20 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="font-bold text-sm tracking-tight text-slate-300 hover:text-white flex items-center gap-2 transition-colors">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                <span>Back to Portfolio</span>
+            </a>
+            
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-400">
+                <span class="text-xs font-mono text-slate-600">PROJECTS:</span>
+                <a href="projectpage1.html" class="hover:text-emerald-400 transition-colors">01. Arena Engine</a>
+                <a href="projectpage2.html" class="hover:text-emerald-400 transition-colors">02. Puzzle Game</a>
+                <a href="projectpage3.html" class="text-emerald-400 font-semibold">03. GDD &amp; Plan</a>
+            </nav>
+
+            <a href="index.html#contact" class="text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 hover:bg-slate-700 transition-colors">
+                Contact
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-5xl mx-auto px-6 pt-10 pb-20 space-y-16">
+
+        <section>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-4">
+                <span>PROJECT 03</span>
+                <span>•</span>
+                <span>PRODUCTION & DESIGN DOCUMENTATION</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+                Game Design Document & Plan
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
+                An in-depth study of gameplay mechanics, level pacing curves, systems balancing, and production pipelines.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-slate-800/40 border border-slate-800">
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Role</span>
+                    <span class="text-sm font-semibold text-white">Level Designer / Games Producer</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Engine / Tools</span>
+                    <span class="text-sm font-semibold text-white">Unreal Engine / Aseprite</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Duration</span>
+                    <span class="text-sm font-semibold text-white">Academic Project</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Institution</span>
+                    <span class="text-sm font-semibold text-white">University of Salford</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <div class="relative aspect-video rounded-2xl bg-slate-800/80 border border-slate-800 overflow-hidden group flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-850 to-slate-900"></div>
+                <div class="relative z-10 text-center p-6">
+                    <p class="text-white font-medium text-base">[ GDD & Production Artifact Overview ]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div class="lg:col-span-2 space-y-8">
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800 space-y-4">
+                    <h2 class="text-xl font-bold text-white mb-4">Project Overview</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Overview of Project 3 detailing team structure, milestone planning, greyboxing blockouts, and playtesting feedback.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800 space-y-4">
+                    <h2 class="text-xl font-bold text-white mb-4">Key Highlights & Accomplishments</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <span class="text-emerald-400 font-bold">▹</span>
+                            <span>Designed complete level greyboxes and environmental pacing curves.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <span class="text-emerald-400 font-bold">▹</span>
+                            <span>Built custom game logic and event triggers using visual scripting / code.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <span class="text-emerald-400 font-bold">▹</span>
+                            <span>Executed playtesting iterations to balance difficulty and player navigation.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <h3 class="text-sm font-mono font-semibold text-white uppercase tracking-wider mb-4">Tools Used</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-sky-400 text-xs font-mono border border-slate-800">Production</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Jira / Trello</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">GDD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-10 border-t border-slate-800/80">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="projectpage2.html" class="p-5 rounded-2xl bg-slate-800/30 border border-slate-800 hover:border-slate-700 transition-all group flex flex-col justify-between">
+                    <span class="text-xs font-mono text-slate-500 mb-2">&larr; Previous</span>
+                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">Project 2: Environmental Puzzle Game</span>
+                </a>
+
+                <a href="index.html#projects" class="p-5 rounded-2xl bg-slate-800/30 border border-slate-800 hover:border-slate-700 transition-all group text-right flex flex-col justify-between">
+                    <span class="text-xs font-mono text-emerald-400 mb-2">Return &rarr;</span>
+                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">All Portfolio Projects</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 relative z-10">
+        <p>&copy; Charlie Eastwood. Games Production &amp; Design Student at the University of Salford.</p>
+    </footer>
+
+</body>
+</html>

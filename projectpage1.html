@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: Arena Combat Engine | Charlie Eastwood</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: { 850: '#111827', 900: '#0F172A', 950: '#0B0F19' },
+                        emerald: { 400: '#34D399', 500: '#10B981', 600: '#059669' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-900 min-h-screen flex flex-col justify-between">
+
+    <div class="fixed inset-0 z-0 opacity-20 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="font-bold text-sm tracking-tight text-slate-300 hover:text-white flex items-center gap-2 transition-colors">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                <span>Back to Portfolio</span>
+            </a>
+            
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-400">
+                <span class="text-xs font-mono text-slate-600">PROJECTS:</span>
+                <a href="projectpage1.html" class="text-emerald-400 font-semibold">01. Arena Engine</a>
+                <a href="projectpage2.html" class="hover:text-emerald-400 transition-colors">02. Puzzle Game</a>
+                <a href="projectpage3.html" class="hover:text-emerald-400 transition-colors">03. GDD &amp; Plan</a>
+            </nav>
+
+            <a href="index.html#contact" class="text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 hover:bg-slate-700 transition-colors">
+                Contact
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-5xl mx-auto px-6 pt-10 pb-20 space-y-16">
+
+        <section>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-4">
+                <span>PROJECT 01</span>
+                <span>•</span>
+                <span>2D TOP-DOWN ARENA GAME</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+                Arena Combat Engine
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
+                A fast-paced 2D top-down survival arena action engine built in Unity with custom player controllers, modular wave spawner systems, dynamic combat states, and custom tilemap hitboxes.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-slate-800/40 border border-slate-800">
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Role</span>
+                    <span class="text-sm font-semibold text-white">Lead Developer</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Engine &amp; Language</span>
+                    <span class="text-sm font-semibold text-white">Unity 2D &amp; C#</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Timeframe</span>
+                    <span class="text-sm font-semibold text-white">4 Weeks (2026)</span>
+                </div>
+                <div>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Status</span>
+                    <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Completed
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <div class="relative aspect-video rounded-2xl bg-slate-800/80 border border-slate-800 overflow-hidden group flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-850 to-slate-900"></div>
+                <div class="relative z-10 text-center p-6">
+                    <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4 text-emerald-400">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <p class="text-white font-medium text-base">Gameplay Showcase Video / Screenshot</p>
+                    <p class="text-slate-400 text-xs mt-1 font-mono">Replace this slot with video embed or image showcase</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div class="lg:col-span-2 space-y-8">
+                <div>
+                    <h2 class="text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase mb-2">Details</h2>
+                    <h3 class="text-2xl font-bold text-white mb-4">Project Overview</h3>
+                    <div class="text-slate-300 space-y-4 leading-relaxed text-sm sm:text-base">
+                        <p>Project 1 was developed as an exploration into top-down action physics, input buffering, and scalable wave progression systems. The core gameplay loop requires the player to survive increasingly difficult waves of varied enemy types inside an enclosed arena.</p>
+                        <p>Special emphasis was placed on juice and game feel: camera shake triggers on impact, dash invulnerability windows, dynamic sound triggers, and responsive directional aiming tied to mouse coordinates.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Key Features &amp; Systems</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-800/30 border border-slate-800 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Custom 2D Controller:</strong> Vector-based movement with dynamic friction curves, dodge-roll dash mechanics with i-frames, and weapon recoil.</span>
+                        </li>
+                        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-800/30 border border-slate-800 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Wave Spawner Logic:</strong> ScriptableObject driven spawn tables allowing custom enemy spawn rates, health multipliers, and boss waves.</span>
+                        </li>
+                        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-800/30 border border-slate-800 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Tilemap Level Architecture:</strong> Polygon collider-based environment layers allowing for dynamic line-of-sight and obstacle collisions.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <h3 class="text-sm font-mono font-semibold text-white uppercase tracking-wider mb-4">Tech Stack</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-emerald-400 text-xs font-mono border border-slate-800">Unity 2D</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">C#</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Aseprite</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Tilemaps</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <h3 class="text-sm font-mono font-semibold text-white uppercase tracking-wider mb-2">Project Artifacts</h3>
+                    <p class="text-xs text-slate-400 mb-4">Access repository or play test build directly:</p>
+                    <div class="space-y-2">
+                        <a href="https://github.com/NoobEclipse" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-200 transition-colors">
+                            <span>GitHub Repository</span>
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-10 border-t border-slate-800/80">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="index.html#projects" class="p-5 rounded-2xl bg-slate-800/30 border border-slate-800 hover:border-slate-700 transition-all group flex flex-col justify-between">
+                    <span class="text-xs font-mono text-slate-500 mb-2">&larr; Return</span>
+                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">All Portfolio Projects</span>
+                </a>
+
+                <a href="projectpage2.html" class="p-5 rounded-2xl bg-slate-800/30 border border-slate-800 hover:border-slate-700 transition-all group text-right flex flex-col justify-between">
+                    <span class="text-xs font-mono text-emerald-400 mb-2">Next Project &rarr;</span>
+                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">Project 2: Environmental Puzzle Game</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 relative z-10">
+        <p>&copy; Charlie Eastwood. Game Production &amp; Design Portfolio.</p>
+    </footer>
+
+</body>
+</html>
