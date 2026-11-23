@@ -31,7 +31,7 @@
 
     <div class="fixed inset-0 z-0 opacity-20 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-    <!-- Header Navigation -->
+    <!-- Navigation Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="font-bold text-sm tracking-tight text-slate-300 hover:text-white flex items-center gap-2 transition-colors">
@@ -66,7 +66,7 @@
             </h1>
 
             <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
-                A simulation game based on managing a cohesive environment.
+                An exploration game focused on spatial mechanics, custom lighting setups, and physics-based environmental interactions.
             </p>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-slate-800/40 border border-slate-800">
@@ -76,28 +76,31 @@
                 </div>
                 <div>
                     <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Engine &amp; Language</span>
-                    <span class="text-sm font-semibold text-white">Unity 3D / C#</span>
+                    <span class="text-sm font-semibold text-white">Unity &amp; C#</span>
                 </div>
                 <div>
                     <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Duration</span>
-                    <span class="text-sm font-semibold text-white">5 Weeks</span>
+                    <span class="text-sm font-semibold text-white">Academic Project</span>
                 </div>
                 <div>
-                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Status</span>
-                    <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Completed
-                    </span>
+                    <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Institution</span>
+                    <span class="text-sm font-semibold text-white">University of Salford</span>
                 </div>
             </div>
         </section>
 
-        <section class="space-y-4">
-            <div class="relative aspect-video rounded-2xl bg-slate-800/80 border border-slate-800 overflow-hidden group flex items-center justify-center">
-                <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-850 to-slate-900"></div>
-                <div class="relative z-10 text-center p-6">
-                    <p class="text-white font-medium text-base">[ Gameplay Trailer / Showcase Image ]</p>
-                </div>
+        <!-- Image Showcase -->
+        <section class="space-y-3">
+            <div class="relative aspect-video rounded-2xl bg-slate-800/80 border border-slate-800 overflow-hidden">
+                <img 
+                    src="EnvironmentSimulator.png" 
+                    alt="Environmental Simulator Gameplay Screenshot" 
+                    class="w-full h-full object-cover"
+                >
             </div>
+            <p class="text-xs font-mono text-slate-500 text-right">
+                In-engine screenshot showcasing environment lighting and spatial layout.
+            </p>
         </section>
 
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -105,16 +108,16 @@
                 <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800 space-y-4">
                     <h2 class="text-xl font-bold text-white mb-4">Project Overview</h2>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        This project focuses on translating the issues we suffer with in regards to global warming into a videogame format to help users better understand how actions affect the environment.
+                        This project focuses on translating level layout designs into interactive spatial mechanics. Designed to encourage player exploration through environmental storytelling, dynamic atmosphere, and subtle visual cues.
                     </p>
                 </div>
 
                 <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800 space-y-4">
-                    <h2 class="text-xl font-bold text-white mb-4">Key Mechanics & Technical Features</h2>
+                    <h2 class="text-xl font-bold text-white mb-4">Key Mechanics &amp; Technical Features</h2>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-slate-300">
                             <span class="text-emerald-400 font-bold">▹</span>
-                            <span>Implemented responsive player control over the camera.</span>
+                            <span>Implemented responsive player movement and physics-based environmental interactions.</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-slate-300">
                             <span class="text-emerald-400 font-bold">▹</span>
@@ -122,7 +125,7 @@
                         </li>
                         <li class="flex items-start gap-3 text-sm text-slate-300">
                             <span class="text-emerald-400 font-bold">▹</span>
-                            <span>Constructed environment layout designed to keep player focused.</span>
+                            <span>Constructed environment layouts optimized for pacing, lighting mood, and player line-of-sight.</span>
                         </li>
                     </ul>
                 </div>
@@ -134,7 +137,18 @@
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-emerald-400 text-xs font-mono border border-slate-800">Unity</span>
                         <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">C#</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Simulator</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Level Design</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <h3 class="text-sm font-mono font-semibold text-white uppercase tracking-wider mb-2">Project Artifacts</h3>
+                    <p class="text-xs text-slate-400 mb-4">Access repository on GitHub:</p>
+                    <div class="space-y-2">
+                        <a href="https://github.com/NoobEclipse" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-200 transition-colors">
+                            <span>GitHub Profile</span>
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -149,7 +163,7 @@
 
                 <a href="projectpage3.html" class="p-5 rounded-2xl bg-slate-800/30 border border-slate-800 hover:border-slate-700 transition-all group text-right flex flex-col justify-between">
                     <span class="text-xs font-mono text-emerald-400 mb-2">Next Project &rarr;</span>
-                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">Project 3: Procedural Track Gen</span>
+                    <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">Project 3: Procedural Track Generator</span>
                 </a>
             </div>
         </section>
@@ -157,7 +171,7 @@
     </main>
 
     <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 relative z-10">
-        <p>&copy; Charlie Eastwood. Games Production &amp; Design Portfolio.</p>
+        <p>&copy; Charlie Eastwood. Games Production &amp; Design Student at the University of Salford.</p>
     </footer>
 
 </body>
